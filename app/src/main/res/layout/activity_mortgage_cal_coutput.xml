@@ -1,0 +1,272 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    tools:context="in.hiddenbrains.calc.Activities.MortgageCalCOutputActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/principalinterest"
+            android:layout_weight="1"
+            style="@style/MortgageCalcOutputTextView"
+            />
+        <TextView
+            android:id="@+id/principleandinterestvalue"
+            android:layout_weight="1"
+            style="@style/MortgageCalcOutputTextView2"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:text="@string/propertytaxoutput"
+            style="@style/MortgageCalcOutputTextView"
+             />
+        <TextView
+            android:id="@+id/propertytaxvalue"
+            android:layout_weight="1"
+            style="@style/MortgageCalcOutputTextView2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout3"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:text="@string/homeownerinsurance"
+            style="@style/MortgageCalcOutputTextView"
+            />
+        <TextView
+            android:id="@+id/homeownerinsurancevalue"
+            android:layout_weight="1"
+            style="@style/MortgageCalcOutputTextView2"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout40"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:text="@string/hoaduesoutput"
+            style="@style/MortgageCalcOutputTextView"
+            />
+        <TextView
+            android:id="@+id/hoaduesvalue"
+            android:layout_weight="1"
+            style="@style/MortgageCalcOutputTextView2"/>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/verylightgrey"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"></View>
+
+    <LinearLayout
+        android:id="@+id/linearlayout4"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/totalmonthlypayment"
+            style="@style/MortgageCalcOutputTextView" />
+        <TextView
+            android:id="@+id/finalanswer"
+            android:layout_weight="1"
+            style="@style/MortgageCalcOutputTextView2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/simple_calc_rectangle_button"
+        >
+
+        <TextView
+            android:text="@string/yourinput"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout5"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/principleamountoutput"
+                style="@style/MortgageCalcOutputTextView3"
+                />
+            <TextView
+                android:id="@+id/principleamountvalue"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/downpaymentoutput"
+                style="@style/MortgageCalcOutputTextView3"
+                />
+            <TextView
+                android:id="@+id/downpaymentvalue"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/interestrateoutput"
+                style="@style/MortgageCalcOutputTextView3"
+                />
+            <TextView
+                android:id="@+id/interestratevalue"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout6"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/interesttimeoutput"
+                style="@style/MortgageCalcOutputTextView3"
+                />
+            <TextView
+                android:id="@+id/timevalue"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout62"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/annualpropertytax"
+                style="@style/MortgageCalcOutputTextView3"
+            />
+            <TextView
+                android:id="@+id/annualpropertytax"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout60"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/homeownerinsurancetax"
+                style="@style/MortgageCalcOutputTextView3"
+                />
+            <TextView
+                android:id="@+id/homeownerinsurancevalueinput"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout90"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/hoavalue"
+                style="@style/MortgageCalcOutputTextView3"
+                />
+            <TextView
+                android:id="@+id/hoavalue"
+                android:layout_weight="1"
+                style="@style/MortgageCalcOutputTextView4"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/ok"
+            android:text="@string/ok"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@color/orange"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/home"
+            android:text="@string/home"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@color/orange"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

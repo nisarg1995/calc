@@ -1,0 +1,377 @@
+<resources>
+    <!-- app name string variables -->
+    <string name="app_name">CalC</string>
+
+    <!-- Activity titles -->
+    <string name="title_activity_interest_cal_coutput">Interest Calculator</string>
+    <string name="title_activity_convertor_calc">Convertor Calculator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">CalC</string>
+    <string name="title_activity_interest_calc">Interest Calulator</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_finalcial_calc">Mortgage Calculator</string>
+
+    <!-- activity_main string valriables -->
+    <string name="simplecalc">Simple</string>
+    <string name="scientificcalc">Scientific</string>
+    <string name="lovecalc">Love</string>
+    <string name="interestcalc">Interest</string>
+    <string name="mortgagecalc">Mortgage</string>
+    <string name="convertorcalc">Convertor</string>
+    <string name="agecalc">Age Finder</string>
+    <string name="dayscalc">Day CalC</string>
+    <!-- convertor_calc string valriables -->
+    <string name="convertor_calc_text">Please Select one of the conversion types from the navigation menu , please swipe from left to right</string>
+
+    <!-- simple_calc string variables -->
+    <string name="SimpleCalculator">Simple Calculator</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="clearall">CA</string>
+    <string name="clearone">C</string>
+    <string name="division">÷</string>
+    <string name="multiplication">×</string>
+    <string name="addition">+</string>
+    <string name="substraction">-</string>
+    <string name="dot">.</string>
+    <string name="equal">=</string>
+
+    <!-- activity_interest_cal_coutput string variables -->
+    <string name="principle">Principal Amount</string>
+    <string name="interest">interest</string>
+    <string name="tax">tax</string>
+    <string name="finalvalue">Final Value</string>
+    <string name="yourinput">Your Input</string>
+    <string name="principleamount">Principal Amount</string>
+    <string name="interestrate">Interest Rate(%)</string>
+    <string name="taxrate">Tax Rate(%)</string>
+    <string name="interesttime">Interest Time</string>
+    <string name="ok">OK</string>
+    <string name="home">HOME</string>
+
+    <!-- activity_interest_calc string variables -->
+    <string name="simple">Simple</string>
+    <string name="compound">Compound</string>
+    <string name="enterprincipleamount">Enter Principal Amount</string>
+    <string name="interestpercentage">Interest Percentage </string>
+    <string name="taxpercentage">Tax Percentage </string>
+    <string name="time">Time</string>
+    <string name="text">(In Months)</string>
+    <string name="text2">(In Years)</string>-
+    <string name="calculate">Calculate</string>
+
+    <!-- fragment_home_fragment_for_conversion_cal_c string variables -->
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="calculate1">CALCULATE</string>
+    <string name="valuetoconvert">Value to convert</string>
+
+    <!-- mortgage_calc string variables -->
+    <string name="basicinputs">Basic Inputs</string>
+    <string name="advancedinputs">Advance Inputs</string>
+    <string name="homeprice">Home Price</string>
+    <string name="downpayment">Down Payment</string>
+    <string name="interestratemortgage">Interest Rate</string>
+    <string name="timemortgage">Loan Terms(Years)</string>
+    <string name="propertytax">Annual Property tax</string>
+    <string name="homeownersinsurance">Annual Homeowners Insurance</string>
+    <string name="hoadues">Monthly HOA Dues</string>
+
+    <!-- mortgage_calc_output string variables -->
+    <string name="principalinterest">Principal \u0026 Interest</string>
+    <string name="propertytaxoutput">Property Taxes</string>
+    <string name="homeownerinsurance">Homeowner Insurance</string>
+    <string name="hoaduesoutput">HOA Dues</string>
+    <string name="totalmonthlypayment">Total Monthly Payment</string>
+    <string name="principleamountoutput">Home amount</string>
+    <string name="downpaymentoutput">Down Payment</string>
+    <string name="interestrateoutput">Interest Rate</string>
+    <string name="interesttimeoutput">Time (In Months)</string>
+    <string name="annualpropertytax">Annual Property tax</string>
+    <string name="homeownerinsurancetax">Annnual Homeowner Insurance </string>
+    <string name="hoavalue">Monthly HOA value</string>
+
+    <string name="angle">Angle</string>
+    <string name="area">Area</string>
+    <string name="bitsandbytes">Bits &amp; Bytes</string>
+    <string name="density">Density</string>
+    <string name="electricalcurrent">Electrical Current</string>
+    <string name="energy">Energy</string>
+    <string name="force">Force</string>
+    <string name="fuelconsuption">Fuel Consumption</string>
+    <string name="length">Length</string>
+    <string name="mass">Mass</string>
+    <string name="power">Power</string>
+    <string name="pressure">Pressure</string>
+    <string name="spped">Speed</string>
+    <string name="temperature">Temperature</string>
+    <string name="time123">Time</string>
+    <string name="volume">Volume</string>
+
+    <!-- Spinner array for interest calc-->
+    <string-array name="spinnervaluesforsimple" >
+        <item>Monthly Simple Interest</item>
+        <item>Yearly Simple Interest</item>
+    </string-array>
+
+    <string-array name="spinnervaluesforcompound" >
+        <item>Monthly Compound Interest</item>
+        <item>Quarterly Compound Interest</item>
+        <item>Half Year Compound Interest</item>
+        <item>Yearly Compound Interest</item>
+    </string-array>
+
+    <!-- Convertor calc navigation menu -->
+    <string-array name="convertor_calc_nav_items">
+        <item>Angle</item>
+        <item>Area</item>
+        <item>Bits &amp; Bytes</item>
+        <item>Density</item>
+        <item>Electrical Current</item>
+        <item>Energy</item>
+        <item>Force</item>
+        <item>Fuel Consumption</item>
+        <item>Length</item>
+        <item>Mass</item>
+        <item>Power</item>
+        <item>Pressure</item>
+        <item>Speed</item>
+        <item>Temperature</item>
+        <item>Time</item>
+        <item>Volume</item>
+
+    </string-array>
+
+
+    <array name="navdrawerimages">
+        <item>@drawable/angle</item>
+        <item>@drawable/area</item>
+        <item>@drawable/bits_and_bytes1</item>
+        <item>@drawable/density</item>
+        <item>@drawable/electrical_current</item>
+        <item>@drawable/energy</item>
+        <item>@drawable/force</item>
+        <item>@drawable/fuel_consumption</item>
+        <item>@drawable/length</item>
+        <item>@drawable/mass</item>
+        <item>@drawable/power</item>
+        <item>@drawable/pressure</item>
+        <item>@drawable/speed</item>
+        <item>@drawable/temperature</item>
+        <item>@drawable/time</item>
+        <item>@drawable/volume</item>
+    </array>
+
+
+    <!-- Spinner array for convertor calc-->
+    <string-array name="angle">
+        <item>Degree</item>
+        <item>Radian</item>
+        <item>Circle</item>
+        <item>Octant</item>
+        <item>Quadrant</item>
+    </string-array>
+
+    <string-array name="area">
+        <item>acres</item>
+        <item>hectres</item>
+        <item>square kilometers</item>
+        <item>square meters</item>
+        <item>square feet</item>
+    </string-array>
+
+    <string-array name="bits_and_bytes">
+        <item>kiloBytes[KB]</item>
+        <item>bits</item>
+        <item>bytes</item>
+        <item>MegaBytes[MB]</item>
+        <item>GigaBytes[GB]</item>
+    </string-array>
+
+    <string-array name="density">
+        <item>grams/liter [g/l]</item>
+        <item>kilograms/liter [kg/l]</item>
+        <item>pounds/gallon [lb/gal]</item>
+        <item>grains/gallon [gr/gal]</item>
+    </string-array>
+
+    <string-array name="electrical_current">
+        <item>ampere</item>
+        <item>miliampere</item>
+        <item>microampere</item>
+        <item>volt/ohm</item>
+        <item>watt/volt</item>
+    </string-array>
+
+    <string-array name="energy">
+        <item>calories</item>
+        <item>joules</item>
+        <item>therms</item>
+        <item>watt seconds</item>
+    </string-array>
+
+    <string-array name="force">
+        <item>newtons [N]</item>
+        <item>kilo Newton [kN]</item>
+        <item>Mega Newton [MN]</item>
+        <item>tonnes force</item>
+    </string-array>
+
+    <string-array name="fuel_consumption">
+        <item>gallons / 100 miles</item>
+        <item>kilometer / liter</item>
+        <item>liters / 100km</item>
+        <item>miles / gallon</item>
+    </string-array>
+
+    <string-array name="length">
+        <item>meter</item>
+        <item>feet</item>
+        <item>kilometer</item>
+        <item>inches</item>
+        <item>miles</item>
+    </string-array>
+
+    <string-array name="mass">
+        <item>gram</item>
+        <item>kilogram</item>
+        <item>miligrams</item>
+        <item>pounds</item>
+        <item>tons</item>
+    </string-array>
+
+    <string-array name="power">
+        <item>watts</item>
+        <item>kilowatts</item>
+        <item>joules/minute</item>
+        <item>joules/second</item>
+        <item>joules/hour</item>
+    </string-array>
+
+    <string-array name="pressure">
+        <item>atmospheres</item>
+        <item>pascals</item>
+        <item>newtons/sq. meters</item>
+        <item>tons-force / sq. feet</item>
+    </string-array>
+
+    <string-array name="speed">
+        <item>kilometers/hour</item>
+        <item>feet/hour</item>
+        <item>feet/minute</item>
+        <item>meter/second</item>
+        <item>miles/hour</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>celsius [C]</item>
+        <item>fahrenheit [F]</item>
+        <item>Kelvin [K]</item>
+        <item>Rankine [R]</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Days</item>
+        <item>Months</item>
+        <item>Years</item>
+        <item>Hours</item>
+        <item>Minutes</item>
+        <item>Seconds</item>
+    </string-array>
+
+    <string-array name="volume">
+        <item>liters</item>
+        <item>milliliters</item>
+        <item>kiloliters</item>
+        <item>gallons</item>
+    </string-array>
+    <string name="title_activity_mortgage_cal_coutput">Mortgage Calculator Output</string>
+    <string name="title_activity_age_calc">Age Calculator</string>
+    <string name="title_activity_asd">asd</string>
+    <string name="title_activity_scientific_cal_c">ScientificCalCActivity</string>
+
+    <string name="sininverse">sin<sup><small>-1</small></sup></string>
+    <string name="cosinverse">cos<sup><small>-1</small></sup></string>
+    <string name="taninverse">tan<sup><small>-1</small></sup></string>
+    <string name="sinhinverse">sinh<sup><small>-1</small></sup></string>
+    <string name="coshinverse">cosh<sup><small>-1</small></sup></string>
+    <string name="tanhinverse">tanh<sup><small>-1</small></sup></string>
+    <string name="square">x<sup><small>2</small></sup></string>
+    <string name="cube">x<sup><small>3</small></sup></string>
+    <string name="xy"><sup><small>y</small></sup>\u221ax</string>
+    <string name="cuberoot"><sup><small>3</small></sup>\u221ax</string>
+    <string name="xpowy">x<sup><small>y</small></sup></string>
+    <string name="log10">log<sub><small>10</small></sub></string>
+    <string name="logy">log<sub><small>y</small></sub></string>
+    <string name="log2">log<sub><small>2</small></sub></string>
+    <string name="power2">2<sup><small>x</small></sup></string>
+
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="sinh">sinh</string>
+    <string name="cosh">cosh</string>
+    <string name="tanh">tanh</string>
+    <string name="factorial">x!</string>
+    <string name="root">\u221a</string>
+    <string name="pi">\u03C0</string>
+    <string name="e">e</string>
+    <string name="ln">ln</string>
+    <string name="plusminus">\u00B1</string>
+    <string name="percentage">%</string>
+    <string name="inverse">1/x</string>
+    <string name="radian">Rad</string>
+    <string name="degree">Deg</string>
+    <string name="random">Random</string>
+    <string name="title_activity_time_cal_c">TimeCalCActivity</string>
+
+    <string name="days234">Day</string>
+    <string name="hour">Hours</string>
+    <string name="minute">Minute</string>
+    <string name="seconds">Second</string>
+    <string name="title_activity_love_cal_c">Love Calculator</string>
+    <string name="title_activity_lova_cal_cmain">Love Calculator</string>
+
+    <!-- Love_calc_activity string variables -->
+    <string name="him">Him</string>
+    <string name="birthday">Bithday</string>
+    <string name="zodiac">Zodiac</string>
+    <string name="her">Her</string>
+    <string name="text4">Tap if you want to set</string>
+    <string name="quote1">"True love is eternal, infinite, and always like itself. It is equal and pure, without violent demonstrations: it is seen with white hairs and is always young in the heart."</string>
+    <string name="quote2">"To love someone means to see him as God intended him."</string>
+    <string name="quote3">“If nothing saves us from death, at least love should save us from life” </string>
+    <string name="quote4">"Love does not consist of gazing at each other, but in looking outward together in the same direction."</string>
+    <string name="quote5"> "I look at you and see the rest of my life in front of my eyes."</string>
+    <string name="quote6">"All, everything that I understand, I only understand because I love."</string>
+    <string name="quote7">"I'm much more me when I'm with you."</string>
+    <string name="quote8">"To love is nothing. To be loved is something. But to love and be loved, that’s everything."</string>
+    <string name="quote9">"There's no substitute for a great love who says, 'No matter what's wrong with you, you're welcome at this table.'"</string>
+    <string name="quote10">"I swear I couldn't love you more than I do right now, and yet I know I will tomorrow."</string>
+
+    <string-array name="zodiac">
+        <item>------</item>
+        <item>Aries</item>
+        <item>Taurus</item>
+        <item>Gemini</item>
+        <item>Cancer</item>
+        <item>Leo</item>
+        <item>Virgo</item>
+        <item>Libra</item>
+        <item>Scorpio</item>
+        <item>Sagittarius</item>
+        <item>Capricorn</item>
+        <item>Aquarias</item>
+        <item>Pisces</item>
+    </string-array>
+    <string name="title_activity_lova_cal_coutput">LovaCalCOutputActivity</string>
+</resources>

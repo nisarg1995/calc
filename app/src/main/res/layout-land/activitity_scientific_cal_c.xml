@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:textAlignment="gravity"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Radian"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radiandegree"/>
+
+            <TextView
+                android:textAlignment="gravity"
+                android:gravity="bottom|end"
+                android:textSize="30sp"
+                android:text="@string/zero"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/result"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/sininverse"
+                android:id="@+id/sininverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/cosinverse"
+                android:id="@+id/cosinverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/taninverse"
+                android:id="@+id/taninverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/square"
+                android:id="@+id/square" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/cube"
+                android:id="@+id/cube" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/xpowy"
+                android:id="@+id/xpowy" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/clearall"
+                android:id="@+id/clearall"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/plusminus"
+                android:id="@+id/sign"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/percentage"
+                android:id="@+id/percentage"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/division"
+                android:id="@+id/division"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/sin"
+                android:id="@+id/sin" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/cos"
+                android:id="@+id/cos" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/cos"
+                android:id="@+id/tan" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/root"
+                android:id="@+id/root" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:id="@+id/cuberoot"
+                android:text="@string/cuberoot" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/xy"
+                android:id="@+id/xyroot" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/seven"
+                android:id="@+id/seven"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/eight"
+                android:id="@+id/eight"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/nine"
+                android:id="@+id/nine"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:id="@+id/multiplication"
+                android:text="@string/multiplication" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:id="@+id/das">
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/sinhinverse"
+                android:id="@+id/sinhinverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/coshinverse"
+                android:id="@+id/coshinverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/tanhinverse"
+                android:id="@+id/tanhinverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/ln"
+                android:id="@+id/ln"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/log10"
+                android:id="@+id/log10" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/logy"
+                android:id="@+id/logy" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/four"
+                android:id="@+id/four"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/five"
+                android:id="@+id/five"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/six"
+                android:id="@+id/six"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/substraction"
+                android:id="@+id/substraction"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:id="@+id/sinh"
+                android:text="@string/sinh" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/cosh"
+                android:id="@+id/cosh" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/tanh"
+                android:id="@+id/tanh" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/log2"
+                android:id="@+id/log2" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/inverse"
+                android:id="@+id/inverse" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:id="@+id/pow2"
+                android:text="@string/power2" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/one"
+                android:id="@+id/one1"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/two"
+                android:id="@+id/two"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/three"
+                android:id="@+id/three"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/addition"
+                android:id="@+id/addition"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/radian"
+                android:id="@+id/radian" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/e"
+                android:id="@+id/e" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:id="@+id/pi"
+                android:text="@string/pi"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/factorial"
+                android:id="@+id/factorial" />
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/random"
+                android:layout_weight="0.88889"
+                android:id="@+id/random" />
+            <Button
+                android:layout_weight="0.88889"
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/zero"
+                android:id="@+id/zero"/>
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/dot"
+                android:id="@+id/dot"/>
+
+            <Button
+                style="@style/SimpleCalculatorButtonTheme"
+                android:text="@string/equal"
+                android:background="@color/orange"
+                android:id="@+id/equal"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

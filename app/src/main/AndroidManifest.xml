@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.hiddenbrains.calc" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/calculator_icon1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.SimpleCalCActivity"
+            android:label="@string/SimpleCalculator" >
+        </activity>
+        <activity
+            android:name=".Activities.InterestCalcActivity"
+            android:label="@string/title_activity_interest_calc" >
+        </activity>
+        <activity
+            android:name=".Activities.InterestCalCOutputActivity"
+            android:label="@string/title_activity_interest_cal_coutput" >
+        </activity>
+        <activity
+            android:name=".Activities.ConvertorCalcActivity"
+            android:label="@string/title_activity_convertor_calc" >
+        </activity>
+        <activity
+            android:name=".Activities.MortgageCalcActivity"
+            android:label="@string/title_activity_finalcial_calc" >
+        </activity>
+        <activity
+            android:name=".Activities.MortgageCalCOutputActivity"
+            android:label="@string/title_activity_mortgage_cal_coutput" >
+        </activity>
+        <activity
+            android:name=".Activities.AgeCalcActivity"
+            android:label="@string/title_activity_age_calc" >
+        </activity>
+        <activity
+            android:name=".Activities.ScientificCalCActivity"
+            android:label="@string/title_activity_scientific_cal_c" >
+        </activity>
+        <activity
+            android:name=".Activities.TimeCalCActivity"
+            android:label="@string/title_activity_time_cal_c" >
+        </activity>
+        <activity
+            android:name=".Activities.LoveCalCActivity"
+            android:label="@string/title_activity_love_cal_c"
+            android:theme="@style/SplashScreenTheme" >
+        </activity>
+        <activity
+            android:name=".Activities.LovaCalCMainActivity"
+            android:label="@string/title_activity_lova_cal_cmain" >
+        </activity>
+        <activity
+            android:name=".Activities.LovaCalCOutputActivity"
+            android:label="@string/title_activity_lova_cal_coutput" >
+        </activity>
+    </application>
+
+</manifest>

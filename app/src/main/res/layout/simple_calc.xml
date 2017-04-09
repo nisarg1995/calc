@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:textSize="20sp"
+            android:id="@+id/upresult"
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="gravity"
+            android:gravity="bottom|end"
+            android:background="#000000"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:text="@string/zero"
+            android:id="@+id/CalculatorString"
+            android:textSize="40sp"
+            android:layout_weight="1"
+            android:textAlignment="gravity"
+            android:gravity="end|bottom"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:id="@+id/ButtonTable">
+
+        <TableRow
+            android:layout_margin="0dp"
+            style="@style/SimpleCalculatorTableRowTheme">
+
+            <Button
+                android:text="@string/clearall"
+                android:id="@+id/Clear"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/clearone"
+                android:id="@+id/ClearOnePlace"
+                style="@style/SimpleCalculatorButtonTheme"
+                />
+
+            <Button
+                android:text="@string/division"
+                android:id="@+id/division"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/multiplication"
+                android:id="@+id/multiplication"
+                style="@style/SimpleCalculatorButtonTheme"
+                android:layout_column="3" />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/SimpleCalculatorTableRowTheme"
+            >
+            <Button
+                android:text="@string/seven"
+                android:id="@+id/seven"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/eight"
+                android:id="@+id/eight"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/nine"
+                android:id="@+id/nine"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/substraction"
+                android:id="@+id/substraction"
+                style="@style/SimpleCalculatorButtonTheme"
+                android:layout_column="3" />
+        </TableRow>
+
+
+        <TableRow
+            style="@style/SimpleCalculatorTableRowTheme">
+            <Button
+                android:text="@string/four"
+                android:id="@+id/four"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/five"
+                android:id="@+id/five"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/six"
+                android:id="@+id/six"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/addition"
+                android:id="@+id/addition"
+                style="@style/SimpleCalculatorButtonTheme"
+                android:layout_column="3" />
+        </TableRow>
+
+
+        <TableRow
+            style="@style/SimpleCalculatorTableRowTheme">
+            <Button
+                android:text="@string/one"
+                android:id="@+id/one"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/two"
+                android:id="@+id/two"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/three"
+                android:id="@+id/three"
+                style="@style/SimpleCalculatorButtonTheme" />
+
+            <Button
+                android:text="@string/dot"
+                android:id="@+id/dot"
+                style="@style/SimpleCalculatorButtonTheme"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            style="@style/SimpleCalculatorTableRowTheme">
+            <Button
+                android:text="@string/zero"
+                android:id="@+id/zero"
+                style="@style/SimpleCalculatorButtonTheme"/>
+
+            <Button
+                android:text="@string/equal"
+                android:id="@+id/equal"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:background="@color/orange"
+                style="@style/SimpleCalculatorButtonTheme" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

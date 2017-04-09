@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="grey">@android:color/darker_gray</color>
+    <color name="lightgrey">#f2f2f2</color>
+    <color name="verylightgrey">#f1f1f1</color>
+    <color name="orange">@android:color/holo_orange_dark</color>
+    <color name="list_divider">@color/lightgrey</color>
+    <color name="list_background">@android:color/white</color>
+    <color name="list_background_pressed">@android:color/holo_orange_dark</color>
+    <color name="counter_text_bg">@color/black</color>
+    <color name="list_item_title">@color/black</color>
+
+    <color name="mdtp_white">@android:color/holo_blue_dark</color>
+    <color name="mdtp_accent_color_focused">@android:color/holo_red_dark</color>
+    <color name="mdtp_accent_color">@android:color/holo_green_dark</color>
+    <color name="mdtp_date_picker_text_normal">@android:color/darker_gray</color>
+    <color name="mdtp_button_selected">@android:color/holo_orange_dark</color>
+    <color name="mdtp_red_focused">@android:color/holo_red_dark</color>
+</resources>

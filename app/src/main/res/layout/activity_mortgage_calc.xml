@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20sp"
+    tools:context="in.hiddenbrains.calc.Activities.MortgageCalcActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:text="@string/basicinputs"
+                android:layout_marginBottom="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:hint="@string/homeprice"
+                style="@style/MortgageCalcEditText"
+                android:layout_weight="0.04"
+                android:id="@+id/homeamount" />
+
+            <EditText
+                android:hint="@string/downpayment"
+                style="@style/MortgageCalcEditText"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:id="@+id/downpayment" />
+
+            <EditText
+                android:hint="@string/interestratemortgage"
+                style="@style/MortgageCalcEditText"
+                android:layout_height="wrap_content"
+                android:id="@+id/interestrate" />
+
+            <EditText
+                android:hint="@string/timemortgage"
+                style="@style/MortgageCalcEditText2"
+                android:layout_weight="0.10"
+                android:id="@+id/timeinyears" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="25sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="@string/advancedinputs"
+                android:layout_marginBottom="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <EditText
+                android:hint="@string/propertytax"
+                android:layout_marginBottom="40dp"
+                style="@style/MortgageCalcEditText"
+                android:id="@+id/propertytax" />
+
+            <EditText
+                android:hint="@string/homeownersinsurance"
+                android:layout_marginBottom="40dp"
+                style="@style/MortgageCalcEditText"
+                android:layout_height="wrap_content"
+                android:id="@+id/homwownerinsurence" />
+
+            <EditText
+                android:hint="@string/hoadues"
+                android:layout_marginBottom="10dp"
+                style="@style/MortgageCalcEditText"
+                android:layout_height="wrap_content"
+                android:id="@+id/hoadues" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="@string/calculate"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculate" />
+
+</LinearLayout>

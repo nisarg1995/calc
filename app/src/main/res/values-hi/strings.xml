@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- app name string variables -->
+    <string name="app_name">कैलकुलेटर</string>
+
+    <!-- Activity titles -->
+    <string name="title_activity_interest_cal_coutput">ब्याज कैलकुलेटर</string>
+    <string name="title_activity_convertor_calc">कनवर्टर कैलक्यूलेटर</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="title_activity_main">कैलकुलेटर</string>
+    <string name="title_activity_interest_calc">ब्याज कैलकुलेटर</string>
+    <string name="title_activity_finalcial_calc">ऋण कैलकुलेटर</string>
+
+    <!-- convertor_calc string valriables -->
+    <string name="convertor_calc_text">नेविगेशन मेनू से रूपांतरण प्रकार से एक का चयन करें , कृपया बाएं से दाएं स्वाइप करे</string>
+
+    <!-- activity_main string valriables -->
+    <string name="simplecalc">सरल</string>
+    <string name="scientificcalc">वैज्ञानिक</string>
+    <string name="lovecalc">इश्क</string>
+    <string name="interestcalc">ब्याज</string>
+    <string name="mortgagecalc">बंधक</string>
+    <string name="convertorcalc">कनवर्टर</string>
+    <string name="agecalc">उम्र खोजक</string>
+    <string name="dayscalc">डे कैलक्यूलेटर</string>
+
+    <!-- simple_calc string variables -->
+    <string name="SimpleCalculator">सरल कैलकुलेटर</string>
+    <string name="zero">०</string>
+    <string name="one">१</string>
+    <string name="two">२</string>
+    <string name="three">३</string>
+    <string name="four">४</string>
+    <string name="five">५</string>
+    <string name="six">६</string>
+    <string name="seven">७</string>
+    <string name="eight">८</string>
+    <string name="nine">९</string>
+    <string name="clearall">सब क्लियर</string>
+    <string name="clearone">क्लियर</string>
+    <string name="division">/</string>
+    <string name="multiplication">*</string>
+    <string name="addition">+</string>
+    <string name="substraction">-</string>
+    <string name="dot">.</string>
+    <string name="equal">=</string>
+
+    <!-- activity_interest_cal_coutput string variables -->
+    <string name="principle">मुख्य राशि</string>
+    <string name="interest">ब्याज</string>
+    <string name="tax">कर</string>
+    <string name="finalvalue">अंतिम मूल्य</string>
+    <string name="yourinput">मूल्य डाला</string>
+    <string name="principleamount">मुख्य राशि</string>
+    <string name="interestrate">ब्याज दर(%)</string>
+    <string name="taxrate">कर दर(%)</string>
+    <string name="interesttime">ब्याज समय</string>
+    <string name="ok">ठीक</string>
+    <string name="home">होम स्क्रीन</string>
+
+    <!-- activity_interest_calc string variables -->
+    <string name="simple">सरल</string>
+    <string name="compound">चक्रवृद्धि</string>
+    <string name="enterprincipleamount">मूल राशि दर्ज कीजीये</string>
+    <string name="interestpercentage">ब्याज प्रतिशत</string>
+    <string name="taxpercentage">कर का प्रतिशत</string>
+    <string name="time">समय</string>
+    <string name="text">(महीने में)</string>
+    <string name="text2">(सालों में)</string>
+    <string name="calculate">गणना कीजीये</string>
+
+    <!-- fragment_home_fragment_for_conversion_cal_c string variables -->
+    <string name="from">से</string>
+    <string name="to">को</string>
+    <string name="calculate1">गणना कीजीये</string>
+    <string name="valuetoconvert"> परिवर्तित करने के लिए मूल्य</string>
+
+    <!-- mortgage_calc string variables -->
+    <string name="basicinputs">बेसिक आदानों</string>
+    <string name="advancedinputs">एडवांस आदानों</string>
+    <string name="homeprice">होम मूल्य</string>
+    <string name="downpayment">अग्रिम भुगतान</string>
+    <string name="interestratemortgage">ब्याज दर</string>
+    <string name="timemortgage">ऋण की अवधि(साल)</string>
+    <string name="propertytax">वार्षिक संपत्ति कर</string>
+    <string name="homeownersinsurance">वार्षिक बीमा</string>
+    <string name="hoadues">मासिक HOA बकाया</string>
+
+    <!-- mortgage_calc_output string variables -->
+    <string name="principalinterest">मूल राशि \u0026 ब्याज</string>
+    <string name="propertytaxoutput">संपत्ति कर</string>
+    <string name="homeownerinsurance">बीमा</string>
+    <string name="hoaduesoutput">HOA बकाया</string>
+    <string name="totalmonthlypayment">कुल मासिक भुगतान</string>
+    <string name="principleamountoutput">होम मूल्य</string>
+    <string name="downpaymentoutput">अग्रिम भुगतान</string>
+    <string name="interestrateoutput">ब्याज दर</string>
+    <string name="interesttimeoutput">ऋण की अवधि(महीने म)</string>
+    <string name="annualpropertytax">वार्षिक संपत्ति कर</string>
+    <string name="homeownerinsurancetax">वार्षिक बीमा</string>
+    <string name="hoavalue">मासिक HOA बकाया</string>
+
+    <string name="angle">कोण</string>
+    <string name="area">क्षेत्र</string>
+    <string name="bitsandbytes">बिट्स &amp; बाइट्स</string>
+    <string name="density">घनत्व</string>
+    <string name="electricalcurrent">विधुत धारा</string>
+    <string name="energy">ऊर्जा</string>
+    <string name="force">बल</string>
+    <string name="fuelconsuption">ईंधन की खपत</string>
+    <string name="length">लंबाई</string>
+    <string name="mass">वजन</string>
+    <string name="power">शक्ति</string>
+    <string name="pressure">दबाव</string>
+    <string name="spped">गति</string>
+    <string name="temperature">तापमान</string>
+    <string name="time123">समय</string>
+    <string name="volume">आद्यतन मात्रा</string>
+
+
+    <!-- Spinner array for interest calc-->
+    <string-array name="spinnervaluesforsimple" >
+        <item>मासिक साधारण ब्याज</item>
+        <item>वार्षिक साधारण ब्याज</item>
+    </string-array>
+
+    <string-array name="spinnervaluesforcompound" >
+        <item>मासिक चक्रवृद्धि ब्याज</item>
+        <item>त्रैमासिक चक्रवृद्धि ब्याज</item>
+        <item>आघे साल की चक्रवृद्धि ब्याज</item>
+        <item>वार्षिक चक्रवृद्धि ब्याज</item>
+    </string-array>
+
+    <!-- Convertor calc navigation menu -->
+    <string-array name="convertor_calc_nav_items">
+        <item>कोण</item>
+        <item>क्षेत्र</item>
+        <item>बिट्स &amp; बाइट्स</item>
+        <item>घनत्व</item>
+        <item>विधुत धारा</item>
+        <item>ऊर्जा</item>
+        <item>बल</item>
+        <item>ईंधन की खपत</item>
+        <item>लंबाई</item>
+        <item>वजन</item>
+        <item>शक्ति</item>
+        <item>दबाव</item>
+        <item>गति</item>
+        <item>तापमान</item>
+        <item>समय</item>
+        <item>आद्यतन मात्रा</item>
+
+    </string-array>
+
+    <array name="navdrawerimages">
+        <item>@drawable/angle</item>
+        <item>@drawable/area</item>
+        <item>@drawable/bits_and_bytes1</item>
+        <item>@drawable/density</item>
+        <item>@drawable/electrical_current</item>
+        <item>@drawable/energy</item>
+        <item>@drawable/force</item>
+        <item>@drawable/fuel_consumption</item>
+        <item>@drawable/length</item>
+        <item>@drawable/mass</item>
+        <item>@drawable/power</item>
+        <item>@drawable/pressure</item>
+        <item>@drawable/speed</item>
+        <item>@drawable/temperature</item>
+        <item>@drawable/time</item>
+        <item>@drawable/volume</item>
+    </array>
+
+
+    <!-- Spinner array for convertor calc-->
+    <string-array name="angle">
+        <item>डिग्री</item>
+        <item>रेडियन</item>
+        <item>सकॅल</item>
+        <item>ओक्टांट</item>
+        <item>वृत्त का चतुर्थ भाग</item>
+    </string-array>
+
+    <string-array name="area">
+        <item>एकड़ जमीन</item>
+        <item>हेक्टर</item>
+        <item>वर्ग किलोमीटर</item>
+        <item>वर्ग मीटर</item>
+        <item>वर्ग फुट</item>
+    </string-array>
+
+    <string-array name="bits_and_bytes">
+        <item>किलोबाइट[KB]</item>
+        <item>बिट्स</item>
+        <item>बाइट्स</item>
+        <item>मेगाबाइट[MB]</item>
+        <item>गीगाबाइट[GB]</item>
+    </string-array>
+
+    <string-array name="density">
+        <item>ग्राम / लीटर [g/l]</item>
+        <item>किलोग्राम / लीटर [kg/l]</item>
+        <item>पौंड / गैलन [lb/gal]</item>
+        <item>गैईन/गैलन [gr/gal]</item>
+    </string-array>
+
+    <string-array name="electrical_current">
+        <item>एम्पेयर</item>
+        <item>मिलिएम्पेयर</item>
+        <item>माइकौएम्पेयर</item>
+        <item>वाल्ट / ओम</item>
+        <item>वाट / वोल्ट</item>
+    </string-array>
+
+    <string-array name="energy">
+        <item>कैलोरी</item>
+        <item>जूल</item>
+        <item>थेर्म</item>
+        <item>वाट सेकंड</item>
+    </string-array>
+
+    <string-array name="force">
+        <item>न्यूटन [N]</item>
+        <item>किलो न्यूटन [kN]</item>
+        <item>मेगा न्यूटन [MN]</item>
+        <item>टन बल</item>
+    </string-array>
+
+    <string-array name="fuel_consumption">
+        <item>गैलन / 100 मील</item>
+        <item>किलोमीटर / लीटर</item>
+        <item>लीटर / 100 किमी</item>
+        <item>मील / गैलन</item>
+    </string-array>
+
+    <string-array name="length">
+        <item>मीटर </item>
+        <item>फीट</item>
+        <item>किलोमीटर</item>
+        <item>इनचेस</item>
+        <item>मील</item>
+    </string-array>
+
+    <string-array name="mass">
+        <item>ग्राम</item>
+        <item>किलोग्राम</item>
+        <item>मिलिग्राम</item>
+        <item>पाउंड</item>
+        <item>टन</item>
+    </string-array>
+
+    <string-array name="power">
+        <item>वाट</item>
+        <item>किलोवाट</item>
+        <item>जूल / मिनट</item>
+        <item>जूल / सेकन्ड</item>
+        <item>जूल / घंटा</item>
+    </string-array>
+
+    <string-array name="pressure">
+        <item>ऐटमोस्फियर</item>
+        <item>पास्कल</item>
+        <item>न्यूटन / वर्ग मीटर</item>
+        <item>टन - बल / वर्ग  पैर</item>
+    </string-array>
+
+    <string-array name="speed">
+        <item>किलोमीटर / घंटे</item>
+        <item>फीट / घंटा</item>
+        <item>फीट/मिनट</item>
+        <item>मीटर / सेकन्ड</item>
+        <item>मील / घंटा</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>सेल्सियस [C]</item>
+        <item>फेरनहाइट [F]</item>
+        <item>केल्विन [K]</item>
+        <item>रैंकिन [R]</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>दिन</item>
+        <item>महीने</item>
+        <item>वर्षों</item>
+        <item>घंटे</item>
+        <item>मिनट</item>
+        <item>सेकंड</item>
+    </string-array>
+
+    <string-array name="volume">
+        <item>लीटर</item>
+        <item>मिलिलीटर</item>
+        <item>किलोलीटर</item>
+        <item>गेलन</item>
+    </string-array>
+
+    <string name="title_activity_mortgage_cal_coutput">ऋण कैलक्यूलेटर आउटपुट</string>
+    <string name="title_activity_age_calc">उम्र कैलकुलेटर</string>
+
+    <string name="sininverse">sin<sup><small>-1</small></sup></string>
+    <string name="cosinverse">cos<sup><small>-1</small></sup></string>
+    <string name="taninverse">tan<sup><small>-1</small></sup></string>
+    <string name="sinhinverse">sinh<sup><small>-1</small></sup></string>
+    <string name="coshinverse">cosh<sup><small>-1</small></sup></string>
+    <string name="tanhinverse">tanh<sup><small>-1</small></sup></string>
+    <string name="square">x<sup><small>2</small></sup></string>
+    <string name="cube">x<sup><small>3</small></sup></string>
+    <string name="xy"><sup><small>y</small></sup>\u221ax</string>
+    <string name="cuberoot"><sup><small>3</small></sup>\u221ax</string>
+    <string name="xpowy">x<sup><small>y</small></sup></string>
+    <string name="log10">log<sub><small>10</small></sub></string>
+    <string name="logy">log<sub><small>y</small></sub></string>
+    <string name="log2">log<sub><small>2</small></sub></string>
+    <string name="power2">2<sup><small>x</small></sup></string>
+
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="sinh">sinh</string>
+    <string name="cosh">cosh</string>
+    <string name="tanh">tanh</string>
+    <string name="factorial">x!</string>
+    <string name="root">\u221a</string>
+    <string name="pi">\u03C0</string>
+    <string name="e">e</string>
+    <string name="ln">ln</string>
+    <string name="plusminus">\u00B1</string>
+    <string name="percentage">%</string>
+    <string name="inverse">1/x</string>
+    <string name="radian">Rad</string>
+    <string name="degree">Deg</string>
+    <string name="random">Random</string>
+
+    <string name="days234">दिन</string>
+    <string name="hour">घंटे</string>
+    <string name="minute">मिनट</string>
+    <string name="seconds">सेकंड</string>
+    <string name="title_activity_love_cal_c">प्यार का कैलकुलेटर</string>
+    <string name="title_activity_lova_cal_cmain">प्यार का कैलकुलेटर</string>
+
+    <string name="him">लड़का</string>
+    <string name="birthday">जन्मदिन</string>
+    <string name="zodiac">राशि </string>
+    <string name="her">लड़की</string>
+    <string name="quote1">मोहब्बत है मेरी इसीलिए दूर है मुझसे,अगर जिद होती तो शाम तक बाहों में होती ।</string>
+    <string name="quote2">तुम जिन्दगी में आ तो गये हो मगर ख्याल रखना,हम ‘जान’ दे देते हैं मगर ‘जाने’ नहीं देते !!</string>
+    <string name="quote3">दीवानगी मे कुछ एसा कर जाएंगे।
+        महोब्बत की सारी हदे पार कर जाएंगे।
+        वादा है तुमसे, दिल बनकर तुम धड़कोगे
+        और सांस बनकर हम आएँगे।।</string>
+    <string name="quote4">हक़ीक़त ना सही तुम ख़्वाब की तरह मिला करों
+        भटके हुएँ मुसाफिर को चांदनी रात की तरह मिला करो !
+        बर्बाद होगा ये गरीब दोनों पहलूँ में
+        मेरे कच्चे घर पर तुम बरसात की तरह मिला करों !</string>
+    <string name="quote5">मरते तो तुझ  पर लाखो होगें,
+        मगर हम तो तेरे साथ मरना चाहते है !</string>
+    <string name="quote6">आज तो हम खूब रुलायेंगे उन्हें,
+        सुना है उसे रोते हुए लिपट जाने की आदत है!</string>
+    <string name="quote7">मेरे दिल से उसकी हर गलती माफ़ हो जाती है,
+        जब वो मुस्कुरा के पूछती है, नाराज हो क्या.?</string>
+    <string name="quote8">हम ज़िन्दगी से प्यार करते हैं, इसलिए नहीं की हमें जीना है बल्कि इसलिए की कोई हमें प्यार करता है।</string>
+    <string name="quote9">मेरी मुस्कराहट तो तब बाहर आती हैं, जब में आप के साथ होता हू!</string>
+    <string name="quote10">किसी ने मुझसे पूछा ज़िंदगी किसी हैं, मेने मुस्कुराकर कहा वो ठीक हे!</string>
+
+    <string-array name="zodiac">
+        <item>------</item>
+        <item>मेष</item>
+        <item>वृषभ</item>
+        <item>मिथुन</item>
+        <item>कर्क</item>
+        <item>सिंह</item>
+        <item>कन्या</item>
+        <item>तुला</item>
+        <item>वृश्चिक</item>
+        <item>धन</item>
+        <item>मकर</item>
+        <item>कुंभ</item>
+        <item>मीन</item>
+    </string-array>
+</resources>

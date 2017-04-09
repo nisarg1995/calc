@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.hiddenbrains.calc.Fragments.HomeFragmentForConversionCalC"
+    android:weightSum="1"
+    >
+
+    <TextView
+        android:id="@+id/convertortype"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/InterestCalcOutputTextView" />
+
+
+    <EditText
+        android:id="@+id/valuetoconvert"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:hint="@string/valuetoconvert"
+        android:inputType="number"
+        style="@style/InterestCalcEditText"
+        />
+
+    <TextView
+        android:text="@string/from"
+        android:textSize="25dp"
+        android:layout_marginLeft="50dp"
+        style="@style/ConvertorCalcTextView"
+        android:layout_width="108dp"
+         />
+
+    <Spinner
+        android:id="@+id/fromspinner"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:text="@string/to"
+        android:textSize="25dp"
+        android:layout_marginLeft="50dp"
+        style="@style/ConvertorCalcTextView"
+        android:layout_width="55dp" />
+
+    <Spinner
+        android:id="@+id/tospinner"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Button
+        android:text="@string/calculate1"
+        android:id="@+id/submit"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/InterestCalcOutputTextView" />
+
+</LinearLayout>
