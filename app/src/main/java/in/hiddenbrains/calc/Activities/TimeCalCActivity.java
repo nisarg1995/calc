@@ -1,5 +1,6 @@
 package in.hiddenbrains.calc.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.Calculations.TimeCalculation;
 import in.hiddenbrains.calc.R;
 
@@ -32,7 +34,8 @@ public class TimeCalCActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_cal_c);
-        Log.e("create","created");
+        Keyboard.setupUI(findViewById(R.id.parent), this);
+
         day1 = (EditText)findViewById(R.id.days1);
         hour1 = (EditText)findViewById(R.id.hours1);
         minute1 = (EditText)findViewById(R.id.minutes1);
@@ -102,5 +105,17 @@ public class TimeCalCActivity extends AppCompatActivity implements View.OnClickL
             minute3.setText(answer[2].toString());
             second3.setText(answer[3].toString());
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_time_cal_c);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 }

@@ -133,7 +133,7 @@ public class ConvertorCalcActivity extends AppCompatActivity implements AdapterV
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            displayView(position);
+        displayView(position);
     }
 
     private void displayView(int position) {
@@ -244,6 +244,7 @@ public class ConvertorCalcActivity extends AppCompatActivity implements AdapterV
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             transaction.replace(R.id.frame_container , fragment).commit();
             mainview.setText("");
+            mainview.setBackground(null);
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);
             setTitle(navMenuTitles[position]);
@@ -253,5 +254,17 @@ public class ConvertorCalcActivity extends AppCompatActivity implements AdapterV
         {
             Log.e("ConvertorCalC","Error retrieving fragment....");
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_convertor_calc);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 }

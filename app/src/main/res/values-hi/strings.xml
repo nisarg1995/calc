@@ -10,7 +10,11 @@
     <string name="title_activity_main">कैलकुलेटर</string>
     <string name="title_activity_interest_calc">ब्याज कैलकुलेटर</string>
     <string name="title_activity_finalcial_calc">ऋण कैलकुलेटर</string>
-
+    <string name="title_activity_lova_cal_coutput">प्यार आउटपुट</string>
+    <string name="title_activity_simple_cal_crecent_trans">हाल ही में लेनदेन</string>
+    <string name="recent">ताज़ा</string>
+    <string name="title_activity_scientific_cal_c">साइंटिफ़िक कैलकुलेटर</string>
+    <string name="title_activity_time_cal_c">समय कैलक्यूलेटर</string>
     <!-- convertor_calc string valriables -->
     <string name="convertor_calc_text">नेविगेशन मेनू से रूपांतरण प्रकार से एक का चयन करें , कृपया बाएं से दाएं स्वाइप करे</string>
 
@@ -21,8 +25,8 @@
     <string name="interestcalc">ब्याज</string>
     <string name="mortgagecalc">बंधक</string>
     <string name="convertorcalc">कनवर्टर</string>
-    <string name="agecalc">उम्र खोजक</string>
-    <string name="dayscalc">डे कैलक्यूलेटर</string>
+    <string name="healthcalc">स्वास्थ्य</string>
+    <string name="dayscalc">पहर</string>
 
     <!-- simple_calc string variables -->
     <string name="SimpleCalculator">सरल कैलकुलेटर</string>
@@ -81,10 +85,10 @@
     <string name="homeprice">होम मूल्य</string>
     <string name="downpayment">अग्रिम भुगतान</string>
     <string name="interestratemortgage">ब्याज दर</string>
-    <string name="timemortgage">ऋण की अवधि(साल)</string>
+    <string name="timemortgage">ऋण की अवधि</string>
     <string name="propertytax">वार्षिक संपत्ति कर</string>
     <string name="homeownersinsurance">वार्षिक बीमा</string>
-    <string name="hoadues">मासिक HOA बकाया</string>
+    <string name="hoadues">मासिक HOA</string>
 
     <!-- mortgage_calc_output string variables -->
     <string name="principalinterest">मूल राशि \u0026 ब्याज</string>
@@ -378,4 +382,31 @@
         <item>कुंभ</item>
         <item>मीन</item>
     </string-array>
+
+    <!-- health_calc_string -->
+
+    <string name="age">आयु :</string>
+    <string name="gender">लिंग :</string>
+    <string name="height">ऊंचाई :</string>
+    <string name="weight">वजन :</string>
+    <string name="activitylevel">सक्रियता स्तर:</string>
+
+    <string-array name="activitylevels">
+        <item>गतिहीन(बिस्तर पर जकड़ा हुआ)</item>
+        <item>रोशनी(जैसे  कार्यालय कर्मचारी)</item>
+        <item>मध्यम(जैसे  पेशेवर क्लीनर)</item>
+        <item>भारी(जैसे  निर्माण मजदूर)</item>
+    </string-array>
+
+    <string name="twolblose">प्रति सप्ताह 1 किलो खोना</string>
+    <string name="onelblose">प्रति सप्ताह 500 ग्राम खोना</string>
+    <string name="maintain">अपने वजन को बनाए रखें</string>
+    <string name="onelbgain">प्रति सप्ताह 500 ग्राम लाभ</string>
+    <string name="twolbgain">प्रति सप्ताह 1 किलो लाभ</string>
+    <string name="kg">किलोग्राम</string>
+    <string name="male">नर</string>
+    <string name="female">महिला</string>
+    <string name="feet">पैर</string>
+    <string name="inch">इंच</string>
+    <string name="terms">*सभी मूल्यो कैलोरी / दिन में हैं</string>
 </resources>

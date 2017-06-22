@@ -3,12 +3,14 @@ package in.hiddenbrains.calc.Activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.Calculations.MortgageCalculation;
 import in.hiddenbrains.calc.R;
 
@@ -23,12 +25,14 @@ public class MortgageCalcActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mortgage_calc);
+        Keyboard.setupUI(findViewById(R.id.parent), this);
+
         homeamount = (EditText)findViewById(R.id.homeamount);
         downpayment = (EditText)findViewById(R.id.downpayment);
         interestrate = (EditText)findViewById(R.id.interestrate);
         timeinyears = (EditText)findViewById(R.id.timeinyears);
-
         propertytax = (EditText)findViewById(R.id.propertytax);
+
         homeownerinsurance = (EditText)findViewById(R.id.homwownerinsurence);
         hoadues = (EditText)findViewById(R.id.hoadues);
 
@@ -113,7 +117,8 @@ public class MortgageCalcActivity extends AppCompatActivity implements View.OnCl
         intent.putExtra("homeownerinsurance",home_insurance.toString());
         intent.putExtra("hoadues",hoa_dues.toString());
 
-        startActivityForResult(intent , 0);
+        startActivityForResult(intent, 0);
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 
     @Override
@@ -127,4 +132,18 @@ public class MortgageCalcActivity extends AppCompatActivity implements View.OnCl
         homeownerinsurance.setText("");
         propertytax.setText("");
     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_finalcial_calc);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
+    }
+
 }

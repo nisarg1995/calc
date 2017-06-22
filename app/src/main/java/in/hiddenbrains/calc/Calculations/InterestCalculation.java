@@ -51,7 +51,7 @@ public class InterestCalculation {
         else if(type == 1){
             if(id == 0){
                 answer[0] = 0.0;
-                Double temp = amount * Math.pow((1 + ((interestrate/100) / 12)), 12 * (time / 12));
+                Double temp = amount * Math.pow((1 + (((interestrate/100)*12 ) / 12 )), 12 * (time / 12));
                 answer[0] = temp;
                 answer[1] = answer[0] - amount;
                 answer[2] = answer[1] * (taxrate / 100);
@@ -59,7 +59,7 @@ public class InterestCalculation {
             }
             else if(id==1){
                 answer[0] = 0.0;
-                Double temp = amount * Math.pow((1 + ((interestrate/100)  / 4)) , 4 * (time));
+                Double temp = amount * Math.pow((1 + ((interestrate/100)*12 / 4 )) , 4 * (time));
                 answer[0] = temp;
                 answer[1] = answer[0] - amount;
                 answer[2] = answer[1] * (taxrate / 100);
@@ -67,7 +67,7 @@ public class InterestCalculation {
             }
             else if(id==2){
                 answer[0] = 0.0;
-                Double temp = amount * Math.pow((1 + ((interestrate/100) / 2)) , 2 * (time ));
+                Double temp = amount * Math.pow((1 + ((interestrate/100)*12 / 2 )) , 2 * (time));
                 answer[0] = temp;
                 answer[1] = answer[0] - amount;
                 answer[2] = answer[1] * (taxrate / 100);
@@ -75,7 +75,7 @@ public class InterestCalculation {
             }
             else if(id==3){
                 answer[0] = 0.0;
-                Double temp = amount * Math.pow((1 + ((interestrate/100) / 1)) , 1 * (time ));
+                Double temp = amount * Math.pow((1 + ((interestrate/100)*12 / 1)) , 1 * (time));
                 answer[0] = temp;
                 answer[1] = answer[0] - amount;
                 answer[2] = answer[1] * (taxrate / 100);

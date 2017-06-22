@@ -1,6 +1,7 @@
 package in.hiddenbrains.calc.Adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +27,6 @@ public class Convertor_NavDrawer_list_adapter extends BaseAdapter{
         this.context = context;
         this.navDrawerItems = navDrawerItems;
     }
-
     public int getCount() {
         return navDrawerItems.size();
     }
@@ -44,17 +44,20 @@ public class Convertor_NavDrawer_list_adapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View view = inflater.inflate(R.layout.drawer_list_item, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.drawer_list_item, parent, false);
 
-            final NavDrawerItem navDrawerItem = navDrawerItems.get(position);
+        TextView tv=(TextView)view.findViewById(R.id.title);
+        Typeface tf=Typeface.createFromAsset(context.getAssets(),"fonts/Righteous-Regular.ttf");
+        tv.setTypeface(tf);
+        final NavDrawerItem navDrawerItem = navDrawerItems.get(position);
 
-            ImageView imageView = (ImageView)view.findViewById(R.id.image);
-            imageView.setImageResource(navDrawerItem.getIcon());
+        ImageView imageView = (ImageView)view.findViewById(R.id.image);
+        imageView.setImageResource(navDrawerItem.getIcon());
 
-            TextView name = (TextView)view.findViewById(R.id.title);
-            name.setText(navDrawerItem.getTitle());
+        TextView name = (TextView)view.findViewById(R.id.title);
+        name.setText(navDrawerItem.getTitle());
 
-            return view;
+        return view;
     }
 }

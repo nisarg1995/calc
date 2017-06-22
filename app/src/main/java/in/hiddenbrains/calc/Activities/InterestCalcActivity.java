@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import in.hiddenbrains.calc.Calculations.InterestCalculation;
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.R;
 
 public class InterestCalcActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
@@ -27,12 +28,17 @@ public class InterestCalcActivity extends AppCompatActivity implements AdapterVi
     private int calctype;
     private List<String> simpleInterestList;
     private List<String> compoundInterestList;
+
     private ArrayAdapter<String> simpleAdapter , customAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interest_calc);
 
+        setTitle(R.string.title_activity_interest_calc);
+
+        Keyboard.setupUI(findViewById(R.id.parent), this);
         principleamount = (EditText)findViewById(R.id.interestprincipleamount);
         interestpercentage = (EditText)findViewById(R.id.interesetpercentage);
         interesttime = (EditText)findViewById(R.id.interesttime);
@@ -141,6 +147,7 @@ public class InterestCalcActivity extends AppCompatActivity implements AdapterVi
                 intent.putExtra("interestamount",answer[1]);
                 intent.putExtra("taxamount", answer[2]);
                 startActivityForResult(intent, 0);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
         }
 
@@ -154,4 +161,18 @@ public class InterestCalcActivity extends AppCompatActivity implements AdapterVi
         interesttime.setText("");
         taxpercent.setText("");
     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_interest_calc);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
+    }
+
 }

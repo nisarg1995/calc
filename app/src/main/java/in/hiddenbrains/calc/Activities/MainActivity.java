@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import in.hiddenbrains.calc.Adapters.CustomAdapter;
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.Model.CalculatorType;
 import in.hiddenbrains.calc.R;
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Keyboard.setupUI(findViewById(R.id.parent), this);
 
         arrayList = new ArrayList<CalculatorType>();
         arrayList.add(new CalculatorType(1, getString(R.string.simplecalc), R.drawable.simple_calc));
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         arrayList.add(new CalculatorType(4,getString(R.string.interestcalc),R.drawable.interest_calc));
         arrayList.add(new CalculatorType(5,getString(R.string.mortgagecalc),R.drawable.mortgage_calc));
         arrayList.add(new CalculatorType(6,getString(R.string.convertorcalc),R.drawable.convertor_calc));
-        arrayList.add(new CalculatorType(7,getString(R.string.agecalc),R.drawable.age_finder));
+        arrayList.add(new CalculatorType(7,getString(R.string.healthcalc),R.drawable.health_calc));
         arrayList.add(new CalculatorType(8,getString(R.string.dayscalc),R.drawable.day_calc));
 
         gridView = (GridView)findViewById(R.id.grid);
@@ -56,11 +57,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 1:
                 Intent intent1 = new Intent(getApplicationContext(),SimpleCalCActivity.class);
                 startActivity(intent1);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case 2:
                 Intent intent2 = new Intent(getApplicationContext(),ScientificCalCActivity.class);
                 startActivity(intent2);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case 3:
@@ -71,26 +74,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 4:
                 Intent intent4 = new Intent(getApplicationContext() , InterestCalcActivity.class);
                 startActivity(intent4);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case 5:
                 Intent intent5 = new Intent(getApplicationContext() , MortgageCalcActivity.class);
                 startActivity(intent5);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case 6:
                 Intent intent6 = new Intent(getApplicationContext() , ConvertorCalcActivity.class);
                 startActivity(intent6);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case 7:
-                Intent intent7 = new Intent(getApplicationContext() , AgeCalcActivity.class);
+                Intent intent7 = new Intent(getApplicationContext() , HealthActivity.class);
                 startActivity(intent7);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case 8:
                 Intent intent8 = new Intent(getApplicationContext() , TimeCalCActivity.class);
                 startActivity(intent8);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
         }
@@ -130,7 +138,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm);
         Intent refresh = new Intent(this, MainActivity.class);
+        refresh.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(refresh);
         finish();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_main);
+    }
+
+
+
 }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.R;
 
 public class MortgageCalCOutputActivity extends AppCompatActivity implements View.OnClickListener {
@@ -22,6 +23,7 @@ public class MortgageCalCOutputActivity extends AppCompatActivity implements Vie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mortgage_cal_coutput);
+        Keyboard.setupUI(findViewById(R.id.parent), this);
 
         principalandinterest = (TextView)findViewById(R.id.principleandinterestvalue);
         propertytax = (TextView)findViewById(R.id.propertytaxvalue);
@@ -68,12 +70,28 @@ public class MortgageCalCOutputActivity extends AppCompatActivity implements Vie
             case R.id.ok:
                 setResult(0,null);
                 finish();
+                overridePendingTransition(R.anim.enter, R.anim.exit);
                 break;
 
             case R.id.home:
                 Intent intent = new Intent(this , MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+                overridePendingTransition(R.anim.enter, R.anim.exit);
+                break;
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_mortgage_cal_coutput);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
+    }
+
 }

@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
+    android:id="@+id/parent"
     android:layout_height="match_parent"
-    android:id="@+id/linearlayout">
+    >
 
     <LinearLayout
         android:id="@+id/linearlayout1"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/fourtydp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -28,7 +29,7 @@
 
     <LinearLayout
         android:id="@+id/linearlayout2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twentydp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -45,7 +46,7 @@
 
     <LinearLayout
         android:id="@+id/linearlayout3"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twentydp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -61,14 +62,14 @@
     </LinearLayout>
 
     <View
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/tendp"
         android:background="@color/verylightgrey"
         android:layout_width="match_parent"
-        android:layout_height="3dp"></View>
+        android:layout_height="@dimen/threedp"></View>
 
     <LinearLayout
         android:id="@+id/linearlayout4"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twentydp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -83,18 +84,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/fourtydp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/fivedp"
+        android:paddingRight="@dimen/fivedp"
+        android:paddingBottom="@dimen/tendp"
         android:background="@drawable/simple_calc_rectangle_button">
 
         <TextView
             android:text="@string/yourinput"
-            android:textSize="20dp"
+            android:textSize="@dimen/twentydp"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:layout_width="wrap_content"
@@ -103,7 +104,7 @@
 
         <LinearLayout
             android:id="@+id/linearlayout5"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/tendp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -118,7 +119,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/tendp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -133,7 +134,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/tendp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -150,7 +151,7 @@
 
         <LinearLayout
             android:id="@+id/linearlayout6"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/tendp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -167,14 +168,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/tendp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/ok"
             android:text="@string/ok"
-            android:textSize="25dp"
+            android:textSize="@dimen/twentyfivedp"
             android:layout_weight="1"
             android:textColor="@color/white"
             android:background="@color/orange"
@@ -187,7 +188,7 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:background="@color/orange"
-            android:textSize="25dp"
+            android:textSize="@dimen/twentyfivedp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

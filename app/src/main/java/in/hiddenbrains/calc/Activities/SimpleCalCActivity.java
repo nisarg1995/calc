@@ -1,12 +1,18 @@
 package in.hiddenbrains.calc.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import in.hiddenbrains.calc.Calculations.Keyboard;
+import in.hiddenbrains.calc.DatabaseHandlers_DatabaseAccessObjects.RecentTransactionSimpleCalCDatabaseHandler;
+import in.hiddenbrains.calc.Model.RecentTransactionSimpleCalC;
 import in.hiddenbrains.calc.R;
 import in.hiddenbrains.calc.Calculations.SimpleCalcCalculation;
 
@@ -20,11 +26,15 @@ public class SimpleCalCActivity extends AppCompatActivity implements View.OnClic
     private String buffer;
     private String result;
     private SimpleCalcCalculation simpleCalcCalculation;
+    private RecentTransactionSimpleCalC recentTransactionSimpleCalC;
+    private RecentTransactionSimpleCalCDatabaseHandler databaseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simple_calc);
+
+        Keyboard.setupUI(findViewById(R.id.parent), this);
 
         one = (Button)findViewById(R.id.one);
         two = (Button)findViewById(R.id.two);
@@ -49,6 +59,7 @@ public class SimpleCalCActivity extends AppCompatActivity implements View.OnClic
 
         CalculatoString = (TextView)findViewById(R.id.CalculatorString);
         upresult = (TextView)findViewById(R.id.upresult);
+
 
         one.setOnClickListener(this);
         two.setOnClickListener(this);
@@ -90,7 +101,6 @@ public class SimpleCalCActivity extends AppCompatActivity implements View.OnClic
         dot.setOnTouchListener(this);
         clearall.setOnTouchListener(this);
         clearoneplace.setOnTouchListener(this);
-
         CalculatoString.setText("0");
     }
 
@@ -160,7 +170,12 @@ public class SimpleCalCActivity extends AppCompatActivity implements View.OnClic
                 break;
 
             case R.id.ClearOnePlace:
-                if(buffer.equals("0") || buffer.equals("")){
+                if(buffer.equals("operator not allowed at last") || buffer.equals("wrong selection") ||buffer.equals(" two operators can't be adjacent")){
+                    buffer = "0";
+                    upresult.setText("");
+                    CalculatoString.setText(buffer);
+                }
+                else if(buffer.equals("0") || buffer.equals("")){
 
                 }
                 else {
@@ -208,8 +223,32 @@ public class SimpleCalCActivity extends AppCompatActivity implements View.OnClic
             case R.id.equal:
                 simpleCalcCalculation = new SimpleCalcCalculation();
                 result = simpleCalcCalculation.Solution(CalculatoString.getText().toString());
+                String temp23 = CalculatoString.getText().toString();
+                Boolean temp = isDouble(result);
+                String name = "";
+                if(temp){
+                    if(Double.parseDouble(result) % 1 == 0  && !result.contains("E")){
+                        result = result.substring(0 , result.length()-2);
+                    }
+                    else if(result.contains("E")){
+                        result = String.format("%f", Double.valueOf(result));
+                        if(Double.parseDouble(result) % 1 == 0 ) {
+                            result = result.substring(0, result.length() - 7);
+                        }
+                    }
+
+                    databaseHandler = new RecentTransactionSimpleCalCDatabaseHandler(this);
+                    RecentTransactionSimpleCalC rs = new RecentTransactionSimpleCalC();
+                    rs.setEvaluationString(temp23+" = ");
+                    rs.setAnswer(result);
+                    databaseHandler.addTransaction(rs);
+                    databaseHandler.deleteTransaction();
+                }
+
                 upresult.setText(CalculatoString.getText().toString() + "=");
+                
                 CalculatoString.setText(result);
+
                 break;
         }
     }
@@ -225,5 +264,55 @@ public class SimpleCalCActivity extends AppCompatActivity implements View.OnClic
             button.setBackgroundResource(R.drawable.simple_calc_rectangle_button);
         }
         return false;
+    }
+
+    boolean isDouble(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_simple_cal_crecent_trans, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.recent) {
+            Intent intent = new Intent(this , SimpleCalCRecentTransActivity.class);
+            startActivityForResult(intent, 0);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.SimpleCalculator);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 }

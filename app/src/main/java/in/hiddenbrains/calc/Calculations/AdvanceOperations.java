@@ -1,8 +1,12 @@
 package in.hiddenbrains.calc.Calculations;
 
+
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Random;
 
 import static java.lang.Math.*;
+
 public class AdvanceOperations {
 
     public static Double addition(Double number1 , Double number2){
@@ -41,16 +45,22 @@ public class AdvanceOperations {
         number1=power(number1, number2);
         return number1;
     }
-    public static Double root(Double number1){
+    public static Double root(Double number1,int m){
 
         number1=sqrt(number1);
-        return number1;
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;        }
+        else {
+            return number1;
+        }
     }
     public static Double pi() {
 
         return 3.14159265359;
     }
-    public static Double sine(Double number1,int a){
+    public static Double sine(Double number1,int a,int m){
 
         number1=sin(number1);
 
@@ -65,9 +75,14 @@ public class AdvanceOperations {
         if(s1>=0.9999999 && s1!=0) {
             number1 = Double.valueOf(round(number1));
         }
+
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;        }
         return number1;
     }
-    public static Double cose(Double number1,int a){
+    public static Double cose(Double number1,int a,int m){
 
         number1=cos(number1);
         if(a==1) {
@@ -81,9 +96,14 @@ public class AdvanceOperations {
         if(s1>=0.9999999 && s1!=0) {
             number1 = Double.valueOf(round(number1));
         }
+
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;        }
         return number1;
     }
-    public static Double tane(Double number1,int a){
+    public static Double tane(Double number1,int a,int m){
 
         number1=tan(number1);
         if(a==1) {
@@ -97,15 +117,33 @@ public class AdvanceOperations {
         if(s1>=0.9999999 && s1!=0) {
             number1 = Double.valueOf(round(number1));
         }
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;        }
         return number1;
     }
-    public static Double ln(Double number1){
-        number1=log(number1);
-        return number1;
+    public static Double ln(Double number1,int m){
+
+        number1= log(number1);
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;
+        }
+        else {
+            return number1;
+        }
     }
-    public static Double log(Double number1){
+    public static Double logee(Double number1,int m){
         number1=log10(number1);
-        return number1;
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;        }
+        else {
+            return number1;
+        }
     }
     public static Double e(){
         return 2.71828;
@@ -209,7 +247,7 @@ public class AdvanceOperations {
         return number1;
     }
     public static Double sinhinverse(Double number1,int a){
-        number1=ln(number1 + sqrt(number1 * number1 + 1));
+        number1=ln((number1 + sqrt(number1 * number1 + 1)), 1);
         if(a==1) {
 
             Double f=180/pi();
@@ -224,7 +262,7 @@ public class AdvanceOperations {
         return number1;
     }
     public static Double coshinverse(Double number1,int a){
-        number1=ln(number1 + sqrt((number1 * number1) - 1));
+        number1=ln((number1 + sqrt((number1 * number1) - 1)),1);
         if(a==1) {
 
             Double f=180/pi();
@@ -239,7 +277,7 @@ public class AdvanceOperations {
         return number1;
     }
     public static Double tanhinverse(Double number1,int a){
-        number1=(ln((1+number1)/(1-number1)))/2;
+        number1=(ln(((1+number1)/(1-number1)),1))/2;
         if(a==1) {
 
             Double f=180/pi();
@@ -270,16 +308,22 @@ public class AdvanceOperations {
         number1=number1*number1*number1;
         return number1;
     }
-    public static Double cuberoot(Double number1){
+    public static Double cuberoot(Double number1,int m){
         number1=cbrt(number1);
-        return number1;
+        if(m==0) {
+            number1=number1*10000;
+            number1=Double.valueOf(round(number1));
+            return number1/10000;        }
+        else {
+            return number1;
+        }
     }
     public static Double masterroot(Double number1,Double number2){
 
         if(number2<0)
         {
             number2=-(number2);
-            number1=pow(number1,number2);
+            number1=pow(number1, number2);
 
             return number1;
         }
@@ -313,5 +357,9 @@ public class AdvanceOperations {
     }
     public static Double sign(Double number1){
         return (number1*-1);
+    }
+
+    public static Double square(Double number){
+        return number * number;
     }
 }

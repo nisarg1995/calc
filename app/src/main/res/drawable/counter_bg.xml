@@ -8,12 +8,12 @@
 
     <!-- If you want to add some padding -->
     <padding
-        android:right="5dp"
-        android:left="5dp" >
+        android:right="@dimen/fivedp"
+        android:left="@dimen/fivedp" >
     </padding>
 
     <!-- Here is the corner radius -->
-    <corners android:radius="2dp" >
+    <corners android:radius="@dimen/twodp" >
     </corners>
 
 </shape>

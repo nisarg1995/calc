@@ -1,17 +1,21 @@
 package in.hiddenbrains.calc.Activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.DuplicateFormatFlagsException;
 
 import in.hiddenbrains.calc.Calculations.AdvanceOperations;
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.R;
 
-public class ScientificCalCActivity extends AppCompatActivity implements View.OnClickListener{
+public class ScientificCalCActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
 
     private Button sinin,cosin,tanin,sin,cos,tan,sinh,cosh,tanh,sinhin,coshin,tanhin,one1,two,three,four,five,six,seven,eight,nine,zero;
     public Button plus,multi,divi ,plusminus, minus,dot,equal,percent,allclear,random,radtodeg,clearone;
@@ -21,16 +25,19 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
     private String calculation="null",buffer="",operation="null";
     Double temp[]=new Double[1];
     int status=0;
+    int mode=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activitity_scientific_cal_c);
+        Keyboard.setupUI(findViewById(R.id.parent), this);
 
         if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_PORTRAIT){
-            result = (TextView) findViewById(R.id.result);
 
+            mode=0;
+            result = (TextView) findViewById(R.id.result);
             sin = (Button) findViewById(R.id.sin);
             cos = (Button) findViewById(R.id.cos);
             tan = (Button) findViewById(R.id.tan);
@@ -61,8 +68,6 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
             minus = (Button) findViewById(R.id.substraction);
             dot = (Button) findViewById(R.id.dot);
             equal = (Button) findViewById(R.id.equal);
-
-
             one1.setOnClickListener(this);
             two.setOnClickListener(this);
             three.setOnClickListener(this);
@@ -94,11 +99,43 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
             cube.setOnClickListener(this);
             clearone.setOnClickListener(this);
 
+            one1.setOnTouchListener(this);
+            two.setOnTouchListener(this);
+            three.setOnTouchListener(this);
+            four.setOnTouchListener(this);
+            five.setOnTouchListener(this);
+            six.setOnTouchListener(this);
+            seven.setOnTouchListener(this);
+            eight.setOnTouchListener(this);
+            nine.setOnTouchListener(this);
+            zero.setOnTouchListener(this);
+            allclear.setOnTouchListener(this);
+            sqrt.setOnTouchListener(this);
+            cuberoot.setOnTouchListener(this);
+            ln.setOnTouchListener(this);
+            log.setOnTouchListener(this);
+            divi.setOnTouchListener(this);
+            multi.setOnTouchListener(this);
+            plus.setOnTouchListener(this);
+            minus.setOnTouchListener(this);
+            equal.setOnTouchListener(this);
+            dot.setOnTouchListener(this);
+            sin.setOnTouchListener(this);
+            cos.setOnTouchListener(this);
+            tan.setOnTouchListener(this);
+            e.setOnTouchListener(this);
+            pi.setOnTouchListener(this);
+            factorial.setOnTouchListener(this);
+            square.setOnTouchListener(this);
+            cube.setOnTouchListener(this);
+            clearone.setOnTouchListener(this);
         }
+
         if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE) {
+
+            mode=1;
             reddeg = (TextView) findViewById(R.id.radiandegree);
             result = (TextView) findViewById(R.id.result);
-
             sin = (Button) findViewById(R.id.sin);
             cos = (Button) findViewById(R.id.cos);
             tan = (Button) findViewById(R.id.tan);
@@ -111,7 +148,6 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
             sinhin = (Button) findViewById(R.id.sinhinverse);
             coshin = (Button) findViewById(R.id.coshinverse);
             tanhin = (Button) findViewById(R.id.tanhinverse);
-
             one1 = (Button) findViewById(R.id.one1);
             two = (Button) findViewById(R.id.two);
             three = (Button) findViewById(R.id.three);
@@ -198,6 +234,63 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
             log2.setOnClickListener(this);
             inverse.setOnClickListener(this);
             power2.setOnClickListener(this);
+
+            one1.setOnTouchListener(this);
+            two.setOnTouchListener(this);
+            three.setOnTouchListener(this);
+            four.setOnTouchListener(this);
+            five.setOnTouchListener(this);
+            six.setOnTouchListener(this);
+            seven.setOnTouchListener(this);
+            eight.setOnTouchListener(this);
+            nine.setOnTouchListener(this);
+            zero.setOnTouchListener(this);
+            allclear.setOnTouchListener(this);
+            sqrt.setOnTouchListener(this);
+            cuberoot.setOnTouchListener(this);
+            ln.setOnTouchListener(this);
+            log.setOnTouchListener(this);
+            divi.setOnTouchListener(this);
+            multi.setOnTouchListener(this);
+            plus.setOnTouchListener(this);
+            minus.setOnTouchListener(this);
+            equal.setOnTouchListener(this);
+            dot.setOnTouchListener(this);
+            sin.setOnTouchListener(this);
+            cos.setOnTouchListener(this);
+            tan.setOnTouchListener(this);
+            e.setOnTouchListener(this);
+            pi.setOnTouchListener(this);
+            factorial.setOnTouchListener(this);
+            square.setOnTouchListener(this);
+            cube.setOnTouchListener(this);
+
+            sinin.setOnTouchListener(this);
+            cosin.setOnTouchListener(this);
+            tanin.setOnTouchListener(this);
+            sinh.setOnTouchListener(this);
+            cosh.setOnTouchListener(this);
+            tanh.setOnTouchListener(this);
+            sinhin.setOnTouchListener(this);
+            coshin.setOnTouchListener(this);
+            tanhin.setOnTouchListener(this);
+            radtodeg.setOnTouchListener(this);
+            e.setOnTouchListener(this);
+            pi.setOnTouchListener(this);
+            factorial.setOnTouchListener(this);
+            random.setOnTouchListener(this);
+            square.setOnTouchListener(this);
+            cube.setOnTouchListener(this);
+            xypower.setOnTouchListener(this);
+            xyroot.setOnTouchListener(this);
+            sqrt.setOnTouchListener(this);
+            cuberoot.setOnTouchListener(this);
+            ln.setOnTouchListener(this);
+            log.setOnTouchListener(this);
+            logy.setOnTouchListener(this);
+            log2.setOnTouchListener(this);
+            inverse.setOnTouchListener(this);
+            power2.setOnTouchListener(this);
         }
     }
 
@@ -220,56 +313,50 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 result.setText(buffer);
                 break;
 
-            case R.id.two:
+            case R.id.zero:
+                buffer = buffer+"0";
+                result.setText(buffer);
+                break;
 
+            case R.id.two:
                 buffer = buffer+"2";
                 result.setText(buffer);
                 break;
 
             case R.id.three:
-
                 buffer = buffer+"3";
                 result.setText(buffer);
                 break;
-            case R.id.four:
 
+            case R.id.four:
                 buffer = buffer+"4";
                 result.setText(buffer);
                 break;
-            case R.id.five:
 
+            case R.id.five:
                 buffer = buffer+"5";
                 result.setText(buffer);
                 break;
 
-
             case R.id.six:
-
                 buffer = buffer+"6";
                 result.setText(buffer);
                 break;
-
             case R.id.seven:
-
                 buffer = buffer+"7";
                 result.setText(buffer);
                 break;
-
             case R.id.eight:
-
                 buffer = buffer+"8";
                 result.setText(buffer);
                 break;
-
             case R.id.nine:
-
                 buffer = buffer+"9";
                 result.setText(buffer);
                 break;
 
-            case R.id.zero:
-
-                buffer = buffer+"0";
+            case R.id.dot:
+                buffer = buffer+".";
                 result.setText(buffer);
                 break;
 
@@ -407,10 +494,13 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 else {
 
                     Double d1 = Double.valueOf(result.getText().toString());
-                    if(reddeg.getText().toString().equals("Degree")){
-                        status=1;
+                    if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE) {
+
+                        if (reddeg.getText().toString().equals("Degree")) {
+                            status = 1;
+                        }
                     }
-                    Double d2 = function.tane(d1, status);
+                    Double d2 = function.tane(d1, status,mode);
                     String s1 = d2.toString();
                     result.setText(s1);
                     break;
@@ -423,10 +513,12 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 else {
 
                     Double d1 = Double.valueOf(result.getText().toString());
-                    if(reddeg.getText().toString().equals("Degree")){
-                        status=1;
+                    if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE) {
+                        if (reddeg.getText().toString().equals("Degree")) {
+                            status = 1;
+                        }
                     }
-                    Double d2 = function.sine(d1, status);
+                    Double d2 = function.sine(d1, status,mode);
                     String s1 = d2.toString();
                     result.setText(s1);
                     break;
@@ -439,10 +531,13 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 else {
 
                     Double d1 = Double.valueOf(result.getText().toString());
-                    if(reddeg.getText().toString().equals("Degree")){
-                        status=1;
+                    if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE) {
+
+                        if (reddeg.getText().toString().equals("Degree")) {
+                            status = 1;
+                        }
                     }
-                    Double d2 = function.cose(d1, status);
+                    Double d2 = function.cose(d1, status,mode);
                     String s1 = d2.toString();
                     result.setText(s1);
                     break;
@@ -486,7 +581,6 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     break;
                 }
                 else {
-
                     Double d1 = Double.valueOf(result.getText().toString());
                     if(reddeg.getText().toString().equals("Degree")){
                         status=1;
@@ -508,20 +602,22 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 break;
 
             case R.id.square:
-                Double d3 =function.powerof2(Double.valueOf(result.getText().toString()));
+                Double d3 =function.square(Double.valueOf(result.getText().toString()));
                 result.setText(d3.toString());
                 break;
 
             case R.id.root:
-                Double d4=function.root(Double.valueOf(result.getText().toString()));
+                Double d4=function.root(Double.valueOf(result.getText().toString()),mode);
                 result.setText(d4.toString());
                 break;
+
             case R.id.cube:
                 Double d5=function.cube(Double.valueOf(result.getText().toString()));
                 result.setText(d5.toString());
                 break;
+
             case R.id.cuberoot:
-                Double d6=function.cuberoot(Double.valueOf(result.getText().toString()));
+                Double d6=function.cuberoot(Double.valueOf(result.getText().toString()),mode);
                 result.setText(d6.toString());
                 break;
 
@@ -532,6 +628,7 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     result.setText("0");
                 }
                 else if (temp[0] != Double.valueOf(result.getText().toString())) {
+                    operation="xpowy";
                     Double temp2 = temp[0];
                     Double value = Double.valueOf(result.getText().toString());
                     Double total = function.powerxy(temp2, value);
@@ -539,6 +636,7 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     result.setText(temp[0].toString());
                 }
                 break;
+
             case R.id.xyroot:
                 calculation="xyroot";
 
@@ -547,27 +645,14 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     result.setText("0");
                 }
                 else if (temp[0] != Double.valueOf(result.getText().toString())) {
+                    operation="xyroot";
                     Double temp2 = temp[0];
                     Double value = Double.valueOf(result.getText().toString());
                     Double total = function.masterroot(temp2, value);
                     temp[0] = total;
                     result.setText(temp[0].toString());
                 }
-                break;
 
-            case R.id.log:
-                Double d7=function.log(Double.valueOf(result.getText().toString()));
-                result.setText(d7.toString());
-                break;
-
-            case R.id.ln:
-                Double d8=function.ln(Double.valueOf(result.getText().toString()));
-                result.setText(d8.toString());
-                break;
-
-            case R.id.log2:
-                Double d9=function.log2(Double.valueOf(result.getText().toString()));
-                result.setText(d9.toString());
                 break;
 
             case R.id.logy:
@@ -578,12 +663,28 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     result.setText("0");
                 }
                 else if (temp[0] != Double.valueOf(result.getText().toString())) {
+                    operation="logy";
                     Double temp2 = temp[0];
                     Double value = Double.valueOf(result.getText().toString());
                     Double total = function.logy(temp2, value);
                     temp[0] = total;
                     result.setText(temp[0].toString());
                 }
+                break;
+
+            case R.id.log10:
+                Double d7=function.logee(Double.valueOf(result.getText().toString()), mode);
+                result.setText(d7.toString());
+                break;
+
+            case R.id.ln:
+                Double d8=function.ln(Double.valueOf(result.getText().toString()),mode);
+                result.setText(d8.toString());
+                break;
+
+            case R.id.log2:
+                Double d9=function.log2(Double.valueOf(result.getText().toString()));
+                result.setText(d9.toString());
                 break;
 
             case R.id.pow2:
@@ -607,7 +708,7 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 }
                 break;
 
-            case R.id .percentage:
+            case R.id.percentage:
                 Double d11=function.percentage(Double.valueOf(result.getText().toString()));
                 result.setText(d11.toString());
                 break;
@@ -632,6 +733,27 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     buffer="abc";
                     operation="+";
                 }
+                else if (operation.equals("logy")){
+                    Double d=function.logy(temp[0],Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="+";
+                }
+                else if (operation.equals("xpowy")){
+                    Double d=function.powerxy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="+";
+                }
+                else if (operation.equals("xyroot")){
+                    Double d=function.masterroot(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="+";
+                }
                 else if(operation.equals("*")){
                     Double d = function.multiplication(temp[0], Double.valueOf(result.getText().toString()));
                     temp[0] = d;
@@ -651,7 +773,6 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     }
                     operation="+";
                 }
-
                 else if(operation.equals("+") || operation.equals("null") || operation.equals(""))
                 {
                     operation="+";
@@ -679,6 +800,27 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     result.setText(temp[0].toString());
                     operation="-";
                 }
+                else if (operation.equals("logy")){
+                    Double d=function.logy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="-";
+                }
+                else if (operation.equals("xpowy")){
+                    Double d=function.powerxy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="-";
+                }
+                else if (operation.equals("xyroot")){
+                    Double d=function.masterroot(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="-";
+                }
                 else if(operation.equals("*")){
                     Double d = function.multiplication(temp[0], Double.valueOf(result.getText().toString()));
                     temp[0] = d;
@@ -698,7 +840,6 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     }
                     operation="-";
                 }
-
                 else if(operation.equals("-") || operation.equals("null") || operation.equals(""))
                 {
                     operation = "-";
@@ -728,6 +869,27 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     result.setText(temp[0].toString());
                     operation="*";
                 }
+                else if (operation.equals("logy")){
+                    Double d=function.logy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="*";
+                }
+                else if (operation.equals("xpowy")){
+                    Double d=function.powerxy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="*";
+                }
+                else if (operation.equals("xyroot")){
+                    Double d=function.masterroot(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="*";
+                }
                 else if(operation.equals("-")){
                     Double d = function.substraction(temp[0], Double.valueOf(result.getText().toString()));
                     temp[0] = d;
@@ -747,7 +909,6 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                     }
                     operation="*";
                 }
-
                 else if(operation.equals("*") || operation.equals("null") || operation.equals(""))
                 {
                     operation = "*";
@@ -771,6 +932,27 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 if(operation.equals("+")) {
                     Double d = function.addition(temp[0], Double.valueOf(result.getText().toString()));
                     temp[0] = d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="/";
+                }
+                else if (operation.equals("logy")){
+                    Double d=function.logy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="/";
+                }
+                else if (operation.equals("xpowy")){
+                    Double d=function.powerxy(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
+                    buffer="abc";
+                    result.setText(temp[0].toString());
+                    operation="/";
+                }
+                else if (operation.equals("xyroot")){
+                    Double d=function.masterroot(temp[0], Double.valueOf(result.getText().toString()));
+                    temp[0]=d;
                     buffer="abc";
                     result.setText(temp[0].toString());
                     operation="/";
@@ -925,6 +1107,7 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                         result.setText(answer7.toString());
                         temp[0]=null;
                         break;
+
                     case "null":
                         break;
                 }
@@ -941,5 +1124,43 @@ public class ScientificCalCActivity extends AppCompatActivity implements View.On
                 }
                 break;
         }
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+
+        if(event.getAction() == MotionEvent.ACTION_DOWN){
+
+            Button button = (Button)findViewById(v.getId());
+
+            if(v.getId()==R.id.equal){
+            }
+            else {
+                button.setBackgroundResource(R.color.verylightgrey);
+            }
+        }
+        else if(event.getAction() == MotionEvent.ACTION_UP){
+            Button button = (Button)findViewById(v.getId());
+            if(v.getId()==R.id.equal){
+            }
+            else{
+                button.setBackgroundResource(R.drawable.simple_calc_rectangle_button);
+            }
+        }
+        return false;
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_scientific_cal_c);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 }

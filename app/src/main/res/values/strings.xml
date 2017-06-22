@@ -11,7 +11,9 @@
     <string name="title_activity_interest_calc">Interest Calulator</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_finalcial_calc">Mortgage Calculator</string>
-
+    <string name="title_activity_lova_cal_coutput">Love Output</string>
+    <string name="title_activity_simple_cal_crecent_trans">Recent Transaction</string>
+    <string name="recent">RECENT</string>
     <!-- activity_main string valriables -->
     <string name="simplecalc">Simple</string>
     <string name="scientificcalc">Scientific</string>
@@ -19,8 +21,8 @@
     <string name="interestcalc">Interest</string>
     <string name="mortgagecalc">Mortgage</string>
     <string name="convertorcalc">Convertor</string>
-    <string name="agecalc">Age Finder</string>
-    <string name="dayscalc">Day CalC</string>
+    <string name="healthcalc">Health CalC</string>
+    <string name="dayscalc">Time CalC</string>
     <!-- convertor_calc string valriables -->
     <string name="convertor_calc_text">Please Select one of the conversion types from the navigation menu , please swipe from left to right</string>
 
@@ -78,13 +80,13 @@
     <!-- mortgage_calc string variables -->
     <string name="basicinputs">Basic Inputs</string>
     <string name="advancedinputs">Advance Inputs</string>
-    <string name="homeprice">Home Price</string>
-    <string name="downpayment">Down Payment</string>
-    <string name="interestratemortgage">Interest Rate</string>
-    <string name="timemortgage">Loan Terms(Years)</string>
-    <string name="propertytax">Annual Property tax</string>
-    <string name="homeownersinsurance">Annual Homeowners Insurance</string>
-    <string name="hoadues">Monthly HOA Dues</string>
+    <string name="homeprice"><font size="18"> Home Price</font></string>
+    <string name="downpayment"><font size="18"> Down Payment</font></string>
+    <string name="interestratemortgage"><font size="18">Interest Rate</font></string>
+    <string name="timemortgage"><font size="18">Loan Terms(Years)</font></string>
+    <string name="propertytax"><font size="17">Annual Property tax</font></string>
+    <string name="homeownersinsurance"><font size="17">Annual Insurance</font></string>
+    <string name="hoadues"><font size="17">Monthly HOA Dues</font></string>
 
     <!-- mortgage_calc_output string variables -->
     <string name="principalinterest">Principal \u0026 Interest</string>
@@ -297,7 +299,7 @@
     <string name="title_activity_mortgage_cal_coutput">Mortgage Calculator Output</string>
     <string name="title_activity_age_calc">Age Calculator</string>
     <string name="title_activity_asd">asd</string>
-    <string name="title_activity_scientific_cal_c">ScientificCalCActivity</string>
+    <string name="title_activity_scientific_cal_c">Scientific Calculator</string>
 
     <string name="sininverse">sin<sup><small>-1</small></sup></string>
     <string name="cosinverse">cos<sup><small>-1</small></sup></string>
@@ -332,7 +334,7 @@
     <string name="radian">Rad</string>
     <string name="degree">Deg</string>
     <string name="random">Random</string>
-    <string name="title_activity_time_cal_c">TimeCalCActivity</string>
+    <string name="title_activity_time_cal_c">Time Calculator</string>
 
     <string name="days234">Day</string>
     <string name="hour">Hours</string>
@@ -343,11 +345,11 @@
 
     <!-- Love_calc_activity string variables -->
     <string name="him">Him</string>
-    <string name="birthday">Bithday</string>
+    <string name="birthday">Birthday</string>
     <string name="zodiac">Zodiac</string>
     <string name="her">Her</string>
     <string name="text4">Tap if you want to set</string>
-    <string name="quote1">"True love is eternal, infinite, and always like itself. It is equal and pure, without violent demonstrations: it is seen with white hairs and is always young in the heart."</string>
+    <string name="quote1">"You can't blame gravity for falling in love."</string>
     <string name="quote2">"To love someone means to see him as God intended him."</string>
     <string name="quote3">“If nothing saves us from death, at least love should save us from life” </string>
     <string name="quote4">"Love does not consist of gazing at each other, but in looking outward together in the same direction."</string>
@@ -373,5 +375,33 @@
         <item>Aquarias</item>
         <item>Pisces</item>
     </string-array>
-    <string name="title_activity_lova_cal_coutput">LovaCalCOutputActivity</string>
+    <string name="title_activity_health">HealthActivity</string>
+
+
+    <!-- health_calc_string -->
+
+        <string name="age">Age :</string>
+        <string name="gender">Gender :</string>
+        <string name="height">Height :</string>
+        <string name="weight">Weight :</string>
+        <string name="activitylevel">Activity Level :</string>
+
+        <string-array name="activitylevels">
+            <item>Sedentary(E.g. bedridden)</item>
+            <item>Light(E.g. office worker)</item>
+            <item>Medium(E.g. professional cleaner)</item>
+            <item>Heavy(E.g construction worker</item>
+        </string-array>
+
+        <string name="twolblose">Lose 1 kg per week</string>
+        <string name="onelblose">Lose 500 grams per week</string>
+        <string name="maintain">Maintain your weight</string>
+        <string name="onelbgain">Gain 500 grams per week</string>
+        <string name="twolbgain">Gain 1 kg per week</string>
+        <string name="kg">Kg</string>
+        <string name="male">Male</string>
+        <string name="female">Female</string>
+        <string name="feet">feet</string>
+        <string name="inch">inches</string>
+        <string name="terms">* All values are in calories/day</string>
 </resources>

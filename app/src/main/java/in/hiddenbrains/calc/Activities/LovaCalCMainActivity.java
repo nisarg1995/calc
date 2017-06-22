@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.Calculations.LoveCalculation;
 import in.hiddenbrains.calc.R;
 
@@ -88,7 +89,7 @@ public class LovaCalCMainActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lova_cal_cmain);
-        
+        Keyboard.setupUI(findViewById(R.id.parent), this);
         himname = (EditText) findViewById(R.id.himname);
         himspinner = (Spinner)findViewById(R.id.himspinner);
         himbirthday = (Button)findViewById(R.id.himbirthday);
@@ -215,8 +216,24 @@ public class LovaCalCMainActivity extends AppCompatActivity implements View.OnCl
 
                 Intent intent = new Intent(this , LovaCalCOutputActivity.class);
                 intent.putExtra("answer",answer);
-                startActivity(intent);
+                startActivityForResult(intent, 0);
                 break;
         }
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        himname.setText("");
+        hername.setText("");
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle(R.string.title_activity_lova_cal_cmain);
+    }
+
+
 }

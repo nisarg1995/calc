@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import in.hiddenbrains.calc.Calculations.Keyboard;
 import in.hiddenbrains.calc.ConvertCalculationClasses.Angle;
 import in.hiddenbrains.calc.ConvertCalculationClasses.Area;
 import in.hiddenbrains.calc.ConvertCalculationClasses.BitsBytes;
@@ -58,6 +59,7 @@ public class HomeFragmentForConversionCalC extends Fragment implements View.OnCl
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home_fragment_for_conversion_cal_c, container, false);
+        Keyboard.setupUI(view.findViewById(R.id.parent), getActivity());
         conversiontype = (TextView)view.findViewById(R.id.convertortype);
         finalanswer = (TextView)view.findViewById(R.id.answer);
 

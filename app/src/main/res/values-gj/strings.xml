@@ -5,14 +5,18 @@
     <!-- Activity titles -->
     <string name="title_activity_interest_cal_coutput">વ્યાજ કેલ્ક્યુલેટર</string>
     <string name="title_activity_convertor_calc">કન્વર્ટર કેલ્ક્યુલેટર</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">સેટિંગ્સ</string>
     <string name="title_activity_main">કેલ્ક્યુલેટર</string>
     <string name="title_activity_interest_calc">વ્યાજ કેલ્ક્યુલેટર</string>
     <string name="title_activity_finalcial_calc">મોર્ગેજ કેલ્ક્યુલેટર</string>
     <string name="title_activity_mortgage_cal_coutput">મોર્ગેજ કેલ્ક્યુલેટર આઉટપુટ</string>
     <string name="title_activity_age_calc">ઉંમર કેલ્ક્યુલેટર</string>
+    <string name="title_activity_lova_cal_coutput">લવ આઉટપુટ</string>
+    <string name="title_activity_simple_cal_crecent_trans">તાજેતરના ટ્રાન્ઝેક્શન</string>
+    <string name="recent">તાજેતરના</string>
 
+    <string name="title_activity_scientific_cal_c">વૈજ્ઞાનિક કેલ્ક્યુલેટર</string>
+    <string name="title_activity_time_cal_c">સમય કેલ્ક્યુલેટર</string>
     <!-- activity_main string valriables -->
     <string name="simplecalc">સરળ</string>
     <string name="scientificcalc">વૈજ્ઞાનિક</string>
@@ -20,13 +24,14 @@
     <string name="interestcalc">વ્યાજ</string>
     <string name="mortgagecalc">મોર્ગેજ</string>
     <string name="convertorcalc">કન્વર્ટર</string>
-    <string name="agecalc">ઉંમર શોધક</string>
-    <string name="dayscalc">દિવસ કેલ્ક્યુલેટર</string>
+    <string name="healthcalc">આરોગ્ય </string>
+    <string name="dayscalc">સમય </string>
 
     <!-- convertor_calc string valriables -->
     <string name="convertor_calc_text">નેવિગેશન મેનુ માંથી એક રૂપાંતરણ પ્રકાર પસંદ કરો , ડાબી બાજુથી જમણી સ્વાઇપ કરો</string>
 
     <!-- simple_calc string variables -->
+
     <string name="SimpleCalculator">સરળ કેલ્ક્યુલેટર</string>
     <string name="zero">૦</string>
     <string name="one">૧</string>
@@ -390,4 +395,28 @@
         <item>કુંભ</item>
         <item>મીન</item>
     </string-array>
+    <string name="age">ઉંમર :</string>
+    <string name="gender">જાતિ :</string>
+    <string name="height">ઊંચાઈ :</string>
+    <string name="weight">વજન :</string>
+    <string name="activitylevel">પ્રવૃત્તિ સ્તર :</string>
+
+    <string-array name="activitylevels">
+        <item>બેઠાડુ(ઉ.દા. પથારીવશ)</item>
+        <item>લાઇટ(ઉ.દા. ઓફિસ કાર્યકર)</item>
+        <item>મધ્યમ(ઉ.દા. વ્યાવસાયિક ક્લીનર)</item>
+        <item>ભારે(ઉ.દા. બાંધકામ કામદાર)</item>
+    </string-array>
+
+    <string name="twolblose">સપ્તાહ દીઠ 1 કિલો ગુમાવો</string>
+    <string name="onelblose">સપ્તાહ દીઠ 500 ગ્રામ ગુમાવો</string>
+    <string name="maintain">તમારું વજન જાળવી રાખવા</string>
+    <string name="onelbgain">સપ્તાહ દીઠ 500 ગ્રામ મેળવવા </string>
+    <string name="twolbgain">સપ્તાહ દીઠ 1 કિલો વજન</string>
+    <string name="kg">કિલો ગ્રામ</string>
+    <string name="male">પુરૂષ</string>
+    <string name="female">સ્ત્રી</string>
+    <string name="feet">પગ</string>
+    <string name="inch">ઇંચ</string>
+    <string name="terms">* બધી કિંમતો કેલરી/ દિવસ મા છે</string>
 </resources>

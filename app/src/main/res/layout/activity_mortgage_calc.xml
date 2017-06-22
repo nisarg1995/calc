@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:layout_marginTop="20sp"
+    android:layout_marginTop="@dimen/twentydp"
+    android:id="@+id/parent"
     tools:context="in.hiddenbrains.calc.Activities.MortgageCalcActivity">
 
     <LinearLayout
@@ -18,36 +19,37 @@
 
             <TextView
                 android:layout_gravity="center_horizontal"
-                android:textSize="25sp"
+                android:textSize="@dimen/twentyfivedp"
                 android:textColor="@color/black"
                 android:text="@string/basicinputs"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="@dimen/fiftydp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <EditText
                 android:hint="@string/homeprice"
+                android:maxLength="10"
                 style="@style/MortgageCalcEditText"
-                android:layout_weight="0.04"
                 android:id="@+id/homeamount" />
 
             <EditText
                 android:hint="@string/downpayment"
+                android:maxLength="10"
                 style="@style/MortgageCalcEditText"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.03"
                 android:id="@+id/downpayment" />
 
             <EditText
                 android:hint="@string/interestratemortgage"
                 style="@style/MortgageCalcEditText"
+                android:maxLength="5"
                 android:layout_height="wrap_content"
                 android:id="@+id/interestrate" />
 
             <EditText
                 android:hint="@string/timemortgage"
                 style="@style/MortgageCalcEditText2"
-                android:layout_weight="0.10"
+                android:maxLength="2"
                 android:id="@+id/timeinyears" />
         </LinearLayout>
 
@@ -55,50 +57,56 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:weightSum="1">
 
             <TextView
-                android:textSize="25sp"
+                android:textSize="@dimen/twentyfivedp"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/black"
                 android:text="@string/advancedinputs"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="@dimen/fiftydp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
 
             <EditText
                 android:hint="@string/propertytax"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="@dimen/fourtydp"
+                android:maxLength="6"
                 style="@style/MortgageCalcEditText"
                 android:id="@+id/propertytax" />
 
             <EditText
                 android:hint="@string/homeownersinsurance"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="@dimen/fourtydp"
+                android:maxLength="6"
                 style="@style/MortgageCalcEditText"
                 android:layout_height="wrap_content"
-                android:id="@+id/homwownerinsurence" />
+                android:id="@+id/homwownerinsurence"
+                android:layout_weight="0" />
 
             <EditText
+                android:maxLength="6"
                 android:hint="@string/hoadues"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/tendp"
                 style="@style/MortgageCalcEditText"
                 android:layout_height="wrap_content"
-                android:id="@+id/hoadues" />
+                android:id="@+id/hoadues"
+                android:layout_weight="0.41" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/thirtydp"
         android:text="@string/calculate"
-        android:textSize="30sp"
+        android:textSize="@dimen/thirtydp"
         android:textColor="@color/white"
         android:background="@color/orange"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="@dimen/thirtydp"
+        android:layout_marginRight="@dimen/thirtydp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/calculate" />
